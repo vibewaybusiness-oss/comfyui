@@ -1,0 +1,15 @@
+[project]
+name = "megatts3-mw"
+description = "Lightweight and Efficient, 🎧Ultra High-Quality Voice Cloning, Chinese and English."
+version = "2.0.0"
+license = {file = "LICENSE"}
+dependencies = ["setproctitle", "attrdict", "librosa", "pydub", "pyloudnorm", "x-transformers", "torchdiffeq", "openai-whisper>=20240930"]
+
+[project.urls]
+Repository = "https://github.com/billwuhao/ComfyUI_MegaTTS3"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "mw"
+DisplayName = "MW-ComfyUI_MegaTTS3"
+Icon = ""
