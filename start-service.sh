@@ -12,16 +12,15 @@ if [ ! -d "/workspace/comfyui" ]; then
     git clone https://github.com/comfyanonymous/comfyui.git
     cd comfyui
     
-    # Create virtual environment
-    python3.10 -m venv .comfyui
-    source .comfyui/bin/activate
-
-
     # Install requirements
     python -m ensurepip --upgrade
     python -m pip install --upgrade setuptools
-    pip install -r requirements.txt
     
+    # Create virtual environment
+    python3.10 -m venv .comfyui
+    source .comfyui/bin/activate
+    pip install -r requirements.txt
+
     # Install additional packages
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
     
