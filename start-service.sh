@@ -15,11 +15,8 @@ if [ ! -d "/comfyui" ]; then
     # Install requirements
     python -m ensurepip --upgrade
     python -m pip install --upgrade setuptools
-    apt install python3.10-venv
+    apt update && apt install -y python3-venv
     
-    # Create virtual environment
-    python3.10 -m venv .comfyui
-    source .comfyui/bin/activate
     pip install -r requirements.txt
 
     # Install additional packages
