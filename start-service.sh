@@ -4,17 +4,18 @@ set -e
 echo "🚀 Starting comfyui setup and launch..."
 
 # Check if comfyui is already installed
-if [ ! -d "/workspace/comfyui" ]; then
+if [ ! -d "/comfyui" ]; then
     echo "📦 Installing comfyui..."
     
     # Install comfyui
-    cd /workspace
+    cd 
     git clone https://github.com/comfyanonymous/comfyui.git
     cd comfyui
     
     # Install requirements
     python -m ensurepip --upgrade
     python -m pip install --upgrade setuptools
+    apt install python3.10-venv
     
     # Create virtual environment
     python3.10 -m venv .comfyui
@@ -41,7 +42,7 @@ if [ ! -d "/workspace/comfyui" ]; then
     echo "✅ comfyui installed successfully"
 else
     echo "✅ comfyui already installed, activating environment..."
-    cd /workspace/comfyui
+    cd /comfyui
     source .comfyui/bin/activate
 fi
 
