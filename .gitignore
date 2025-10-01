@@ -1,0 +1,42 @@
+__pycache__/
+*.py[cod]
+*.log
+extra_model_paths.yaml
+
+# Ignore common project dirs
+/output/
+ /input/
+!/input/example.png
+/models/
+ /temp/
+ /custom_nodes/
+!custom_nodes/example_node.py.example
+/web/extensions/*
+!/web/extensions/logging.js.example
+!/web/extensions/core/
+/tests-ui/data/object_info.json
+
+# IDE / editor junk
+/.vs
+.vscode/
+.idea/
+
+/venv/
+/.venv/
+/.comfyui/
+/user/
+
+/SageAttention/
+/.DS_Store
+web_custom_versions/
+openapi.yaml
+filtered-openapi.yaml
+uv.lock
+/custom_nodes/
+/models/
+/temp/
+/input/
+/output/
+/user/
+/web/
+/web_custom_versions/
